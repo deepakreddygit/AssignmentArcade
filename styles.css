@@ -1,0 +1,92 @@
+ ::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.chart-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; 
+}
+
+#barchart {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.legend-rect {
+    stroke: red;
+    stroke-width: 2px;
+}
+
+.legend-text {
+    font-size: 12px;
+    alignment-baseline: middle;
+}
+
+  .chart-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.chart-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.brush-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.brush-checkbox {
+    margin-right: 5px;
+    margin-top: 3px;
+}
+.axis-label {
+    fill: #333;
+    font-size: 14px;
+
+}
+
+.chart-title {
+    fill: #333;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.legend text {
+    font-size: 12px;
+    
+}
+#tooltip {
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    height: auto;
+    padding: 8px;
+    font: 12px;
+    background: lightsteelblue;
+    border: 0;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Group-20</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+h1, h3 {
+    color: #333;
+    padding: 10px; 
+    border-radius: 8px; 
+    margin-bottom: 10px; 
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.chart-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+.chart-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex; 
+    align-items: center; 
+    background-color: #f0f0f0;
+    padding: 8px;
+    border-radius: 8px;
+}
+#barchart-container {
+    background-color: #e6f7ff; 
+}
+#linechart-container {
+    background-color: #ffe6e6;
+}
+#scatterplot-container {
+    background-color: #ffffcc;
+}
+#tooltip {
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: rgb(144, 235, 8);
+    border-radius: 8px;
+    border: 2px solid black;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 999;
+}
+.dropdown-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+#attributeSelector {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+#attributeSelector option {
+background-color: #f0f0f0;
+color: #333;
+}
+
+#attributeSelector option:checked {
+background-color: #007bff;
+color: #fff;
+}
+.small{
+    background-color: #e6e6e6;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="small">
+        <h1 style="text-align: center; background-color: #e6e6e6;">Group-20</h1>
+        <h3 style="text-align: center; background-color: #e6e6e6;">Members: Manikanta Sai Yadlapalli and Sai Deepak Reddy Satti</h3>
+        <h3 style="text-align: center; background-color: #e6e6e6;">Dataset: a1-cars 🚗</h3>
+    </div>
+        <hr>
+        <label for="toggleBrush" class="brush-label">
+            <input type="checkbox" id="toggleBrush" class="brush-checkbox">Check this to start brushing
+        </label>
+        <hr>
+        <!-- Scatter plot container -->
+        <div id="scatterplot-container" class="chart-container" style="text-align: center;">
+            <div class="chart-title">Scatter Plot (1)</div>
+            <div id="scatterplot"></div>
+        </div>
+        <hr>
+        <!-- Bar chart container -->
+        <div id="barchart-container" class="chart-container" style="text-align: center;">
+            <div class="chart-title">Bar Chart (2)</div>
+            <select id="attributeSelector">
+                <option value="Weight">Weight</option>
+                <option value="MPG">MPG</option>
+            </select>
+            <div id="barchart"></div>
+            <!-- Legend for bar chart -->
+            <div id="barLegend"></div>
+        </div>
+        <hr>
+        <!-- Line chart container -->
+        <div id="linechart-container" class="chart-container" style="text-align: center;">
+            <div class="chart-title">Line Chart (3)</div>
+            <div id="linechart"></div>
+        </div>
+        <div id="tooltip"></div>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-zoom.v2.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
